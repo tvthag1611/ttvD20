@@ -6,7 +6,29 @@ import Club from './components/Club';
 import Self from './components/Self';
 
 function App() {
-
+  const [infoAssign, setInfoAssign] = useState({
+    name: '',
+    yearOfBirth: 2002,
+    sex: "Nam", // Nam is male, Nu is female
+    hometown: '',
+    school: "PTIT", // PTIT is ptit, Other is other school
+    otherSchool: '',
+    class: '',
+    msv: '',
+    email: '',
+    phoneNumber: '',
+    facebook: '',
+    address: '',
+    time: '',
+    why: '',
+    you_want: '',
+    otherClub: '',
+    you_will: '',
+    leader: 5,
+    group: 5,
+    communication: 5,
+    creation: 5,
+  })
   const [step, setStep] = useState(1)
   const [isAssign, setIsAssign] = useState(false)
   const [done, setDone] = useState(false)
@@ -21,7 +43,7 @@ function App() {
   const signUpClub = () => {
     setIsAssign(false)
     setDone(true)
-    console.log(step)
+    console.log(infoAssign)
   }
 
   return (
@@ -53,7 +75,22 @@ function App() {
         <Step step={step}/>
         <div className="form-outer">
           <form action="#">
-            {step === 1 ? <Info /> : step === 2 ? <Club /> : <Self />}
+            {
+              step === 1 ?
+              <Info
+                infoAssign={infoAssign}
+                setInfoAssign={setInfoAssign}
+              /> :
+              step === 2 ?
+              <Club
+                infoAssign={infoAssign}
+                setInfoAssign={setInfoAssign}
+              /> :
+              <Self
+                infoAssign={infoAssign}
+                setInfoAssign={setInfoAssign}
+              />
+            }
           </form>
         </div>
         <div className="next-step">

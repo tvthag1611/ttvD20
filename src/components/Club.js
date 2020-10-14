@@ -1,7 +1,16 @@
 import React from 'react'
 import '../styles/Info.css'
 
-export default function Club() {
+export default function Club({infoAssign, setInfoAssign}) {
+  const onChange = event => {
+    let target = event.target
+    let name = target.name
+    let value = target.value
+    setInfoAssign({
+      ...infoAssign,
+      [name] : value
+    })
+  }
   return (
     <div className="page">
       <div className="field field-first">
@@ -9,6 +18,8 @@ export default function Club() {
         <textarea
           name="time"
           rows="6"
+          onChange={onChange}
+          defaultValue={infoAssign.time}
         >
         </textarea>
       </div>
@@ -17,14 +28,18 @@ export default function Club() {
         <textarea
           name="why"
           rows="6"
+          onChange={onChange}
+          defaultValue={infoAssign.why}
         >
         </textarea>
       </div>
       <div className="field">
         <label className="label">Bạn mong muốn gì khi tham gia CLB?<span className="red">*</span></label>
         <textarea
-          name="you-want"
+          name="you_want"
           rows="6"
+          onChange={onChange}
+          defaultValue={infoAssign.you_want}
         >
         </textarea>
       </div>
@@ -33,8 +48,10 @@ export default function Club() {
         bạn nghĩ mình đủ thời gian cho tất cả các CLB không?
         <span className="red">*</span></label>
         <textarea
-          name="other-club"
+          name="otherClub"
           rows="6"
+          onChange={onChange}
+          defaultValue={infoAssign.otherClub}
         >
         </textarea>
       </div>
@@ -43,8 +60,10 @@ export default function Club() {
         bạn dự tính sẽ thực hiện những gì?
         <span className="red">*</span></label>
         <textarea
-          name="is-member-you-will"
+          name="you_will"
           rows="6"
+          onChange={onChange}
+          defaultValue={infoAssign.you_will}
         >
         </textarea>
       </div>
