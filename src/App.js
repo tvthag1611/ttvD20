@@ -72,6 +72,7 @@ function App() {
         isAssign ?
         <div className="content_asign">
         <header>Đăng kí tham gia CLB Lập Trình PTIT</header>
+        <strong><span className="red">*</span> là bắt buộc</strong>
         <Step step={step}/>
         <div className="form-outer">
           <form action="#">
@@ -86,10 +87,12 @@ function App() {
                 infoAssign={infoAssign}
                 setInfoAssign={setInfoAssign}
               /> :
+              step === 3 ?
               <Self
                 infoAssign={infoAssign}
                 setInfoAssign={setInfoAssign}
-              />
+              /> :
+                <h3>ProPTIT xin chào</h3>
             }
           </form>
         </div>
