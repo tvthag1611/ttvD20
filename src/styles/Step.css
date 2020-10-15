@@ -45,7 +45,7 @@
   bottom: 11px;
   left: 50px;
   height: 3px;
-  width: 258px;
+  width: 235px;
   background: #262626;
 }
 .progress-bar .step .bullet.active:after{
@@ -89,7 +89,7 @@
 @media only screen and (max-width: 600px) {
   .progress-bar .step .bullet:before,
   .progress-bar .step .bullet:after{
-    width: 10vw;
+    width: 12vw;
   }
 }
 
@@ -99,13 +99,13 @@
   }
   .progress-bar .step .bullet:before,
   .progress-bar .step .bullet:after{
-    width: 30px;
+    width: 40px;
   }
 }
 
 @media only screen and (max-width: 320px) {
   .progress-bar .step .bullet:before,
   .progress-bar .step .bullet:after{
-    width: 10px;
+    width: 20px;
   }
 }

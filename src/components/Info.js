@@ -36,6 +36,7 @@ export default function Info({infoAssign, setInfoAssign}) {
           name="name"
           onChange={onChange}
           value={infoAssign.name}
+          placeholder="Vd: Trần Văn Thắng"
         />
       </div>
       <div className="field">
@@ -159,6 +160,7 @@ export default function Info({infoAssign, setInfoAssign}) {
           name="facebook"
           onChange={onChange}
           value={infoAssign.facebook}
+          placeholder="Vd: Trần Văn Thắng (https://www.facebook.com/tranvanthang2k/)"
         />
       </div>
       <div className="field">
